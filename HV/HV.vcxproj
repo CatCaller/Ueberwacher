@@ -109,10 +109,12 @@
     </ClCompile>
     <ClCompile>
       <ControlFlowGuard>false</ControlFlowGuard>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <PreprocessorDefinitions>ZYCORE_STATIC_BUILD;ZYDIS_STATIC_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\HV\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <DisableSpecificWarnings>4083;4005;4201;4091;4310;4471;28172;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <EntryPointSymbol>driver_entry</EntryPointSymbol>
@@ -143,8 +145,10 @@
     <ClInclude Include="event_injection.h" />
     <ClInclude Include="exceptions.h" />
     <ClInclude Include="exit_info.h" />
+    <ClInclude Include="exit_tracer.hpp" />
     <ClInclude Include="hypercall.h" />
     <ClInclude Include="hyper_helpers.h" />
+    <ClInclude Include="ia32.hpp" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="machine_frame.h" />
     <ClInclude Include="msr.h" />
@@ -169,6 +173,7 @@
     <ClInclude Include="wrappers.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="exit_tracer.cpp" />
     <ClCompile Include="hyper_helpers.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pattern_scan.cpp" />

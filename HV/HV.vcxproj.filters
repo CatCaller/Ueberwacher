@@ -35,6 +35,9 @@
     <Filter Include="Resource Files\Svm\Vmexit">
       <UniqueIdentifier>{c4818d9b-9530-4a1d-962c-6ad3dfbcc76d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\vmexit_tracing">
+      <UniqueIdentifier>{0d31e126-7a4b-41b3-a611-86fe97dcea77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="control_register.h">
@@ -127,6 +130,12 @@
     <ClInclude Include="spinlock.h">
       <Filter>Resource Files\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="exit_tracer.hpp">
+      <Filter>Resource Files\vmexit_tracing</Filter>
+    </ClInclude>
+    <ClInclude Include="ia32.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -146,6 +155,9 @@
     </ClCompile>
     <ClCompile Include="hyper_helpers.cpp">
       <Filter>Resource Files\Svm\Vmexit</Filter>
+    </ClCompile>
+    <ClCompile Include="exit_tracer.cpp">
+      <Filter>Resource Files\vmexit_tracing</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
